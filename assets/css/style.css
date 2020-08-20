@@ -1,0 +1,20 @@
+aside {
+  margin: 1rem;
+  float: left;
+}
+
+section {
+  margin: 1rem;
+  float: right;
+}
+
+.list-city {
+  width: 100%;
+  color: #495057;
+  text-align: inherit;
+}
+
+.singleDay {
+  width: 150px;
+  height: 150px;
+}

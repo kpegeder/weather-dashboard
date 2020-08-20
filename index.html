@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="us-en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+      .myStyle {
+        border: solid red 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="jumbotron myStyle">
+      <h1>Weather Dashboard</h1>
+    </header>
+
+    <aside class="cities col-3 myStyle">
+      <h3>Search for a City:</h3>
+      <input
+        type="text"
+        placeholder="Portland"
+        name="searchCity"
+        id="searchCity"
+      />
+      <button type="button" class="btn citySearchBtn">Search</button>
+      <div class="list-group">
+        <button type="button" class="list-group-item list-city">
+          Atlanta
+        </button>
+        <button type="button" class="list-group-item list-city">
+          Paris
+        </button>
+        <button type="button" class="list-group-item list-city">
+          London
+        </button>
+        <button type="button" class="list-group-item list-city">
+          Seattle
+        </button>
+        <button type="button" class="list-group-item list-city">
+          New York City
+        </button>
+      </div>
+    </aside>
+    <section class="cityInfo col-8 myStyle">
+      <h2 class="city"></h2>
+      <div class="temperature"></div>
+      <div class="humidity"></div>
+      <div class="wind"></div>
+      <div class="uvIndex"></div>
+    </section>
+    <section class="forcast col-8 myStyle">
+      <h3>5-Day Forcast</h3>
+      <div class="forcast row">
+        <div class="singleDay myStyle">1</div>
+        <div class="singleDay myStyle">2</div>
+        <div class="singleDay myStyle">3</div>
+        <div class="singleDay myStyle">4</div>
+        <div class="singleDay myStyle">5</div>
+      </div>
+    </section>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
