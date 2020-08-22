@@ -17,4 +17,7 @@ section {
 .singleDay {
   width: 150px;
   height: 150px;
+  background-color: rgb(0, 110, 255);
+  margin: 10px auto;
+  border-radius: 5px;
 }
