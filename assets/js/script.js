@@ -29,7 +29,7 @@ $(document).ready(function () {
 
   function uvForecast() {
     let uviURL =
-      "http://api.openweathermap.org/data/2.5/uvi?appid=" +
+      "https://api.openweathermap.org/data/2.5/uvi?appid=" +
       authKey +
       "&lat=" +
       lat +
@@ -67,7 +67,9 @@ $(document).ready(function () {
 
       // Retrieving the URL for the image
       let imgURL =
-        "http://openweathermap.org/img/wn/" + response.weather[0].icon + ".png";
+        "https://openweathermap.org/img/wn/" +
+        response.weather[0].icon +
+        ".png";
 
       // Creating elements for html
       let city = $("<h2>");
@@ -136,7 +138,7 @@ $(document).ready(function () {
 
         // Retrieving the URL for the image
         let imgURL =
-          "http://openweathermap.org/img/wn/" +
+          "https://openweathermap.org/img/wn/" +
           response.daily[i].weather[0].icon +
           ".png";
 
@@ -189,11 +191,5 @@ $(document).ready(function () {
     for (let i = 0; i < searchHistory.length; i++) {
       previousCityBtn(searchHistory[i]);
     }
-    // showCities();
   }
-
-  // // Display searched cities
-  // function showCities() {
-  //   console.log(searchHistory);
-  // }
 });
