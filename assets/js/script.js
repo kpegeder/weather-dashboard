@@ -8,6 +8,7 @@ $(document).ready(function () {
 
   forecast(citySearch);
 
+  // Search city button
   $(".citySearchBtn").on("click", function () {
     citySearch = $("#searchCity").val().trim();
 
@@ -22,12 +23,13 @@ $(document).ready(function () {
     $("#searchCity").val("");
   });
 
+  // Search history button
   $(document).on("click", ".historyBtn", function () {
     let historyCity = $(this).val();
-    console.log(historyCity);
     forecast(historyCity);
   });
 
+  // Make UV index
   function uvForecast() {
     let uviURL =
       "https://api.openweathermap.org/data/2.5/uvi?appid=" +
@@ -48,6 +50,8 @@ $(document).ready(function () {
         UV.addClass("uvBox-mod");
       } else if (response.value >= 6 && response.value < 8) {
         UV.addClass("uvBox-hi");
+      } else if (response.value >= 8 && response.value < 11) {
+        UV.addClass("uvBox-vh");
       } else {
         UV.addClass("uvBox-bad");
       }
@@ -58,6 +62,7 @@ $(document).ready(function () {
     });
   }
 
+  // Current day forecast
   function forecast(city) {
     // Clear previous city info
     $(".cityInfo").empty();
@@ -113,6 +118,7 @@ $(document).ready(function () {
     });
   }
 
+  // Create button for search history
   function previousCityBtn(city) {
     let button = $("<button>");
 
@@ -125,6 +131,7 @@ $(document).ready(function () {
     $(".list-group").prepend(button);
   }
 
+  // Make 5-day Forecast
   function fiveDayForecast() {
     $(".singleDay").empty();
 
@@ -186,7 +193,6 @@ $(document).ready(function () {
   // Store searched cities
   function searchedCities() {
     localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
-    console.log(searchHistory);
   }
 
   // Get searched cities

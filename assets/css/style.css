@@ -25,6 +25,7 @@
   text-align: center;
   padding: 10px;
   color: white;
+  margin-bottom: 1em;
 }
 
 .list-group {
@@ -43,6 +44,7 @@ body {
 .btn {
   background-color: #292929;
   color: #f0eaea;
+  margin-left: 1.2em;
 }
 
 .cityInfo {
@@ -74,6 +76,13 @@ body {
 .uvBox-hi {
   width: fit-content;
   height: 1.5em;
+  background-color: #ffff33;
+  border-radius: 5px;
+}
+
+.uvBox-vh {
+  width: fit-conent;
+  height: 1.5em;
   background-color: #ffb327;
   border-radius: 5px;
 }
@@ -83,4 +92,8 @@ body {
   height: 1.5em;
   background-color: #ff3b3b;
   border-radius: 5px;
+}
+
+h3 {
+  text-align: center;
 }
