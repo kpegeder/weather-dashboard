@@ -1,18 +1,12 @@
 $(document).ready(function () {
   let lat;
   let lon;
-  // let dayArr = [];
   let displayDate;
   let citySearch = "Portland";
   const authKey = "5d1c7596956991e51b3545595059228a";
-  // Retrieving the URL for the image
-  // const imgURL = "http://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png"
-
-  // Creating an element to hold the image
-  // var image = $("<img>").attr("src", imgURL);
+  let searchHistory = [];
 
   forecast(citySearch);
-  // fiveDayForecast(citySearch);
 
   $(".citySearchBtn").on("click", function () {
     citySearch = $("#searchCity").val().trim();
@@ -23,12 +17,13 @@ $(document).ready(function () {
 
     forecast(citySearch);
     previousCityBtn(citySearch);
-    $("#searchCity").empty().val("");
+    searchHistory.push(citySearch);
+    searchedCities();
+    $("#searchCity").val("");
   });
 
   $(document).on("click", ".historyBtn", function () {
     let historyCity = $(this).val();
-    console.log(historyCity);
     forecast(historyCity);
   });
 
@@ -132,7 +127,6 @@ $(document).ready(function () {
       url: fiveDayURL,
       method: "GET"
     }).then(function (response) {
-      console.log(response);
       for (let i = 1; i < 6; i++) {
         // Get future days
         unixTime(response.daily[i].dt);
@@ -176,4 +170,30 @@ $(document).ready(function () {
     let year = date.getFullYear();
     displayDate = month + "/" + day + "/" + year;
   }
+
+  // Store searched cities
+  function searchedCities() {
+    localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
+    console.log(searchHistory);
+  }
+
+  // Get searched cities
+  init();
+  function init() {
+    let storedCities = JSON.parse(localStorage.getItem("searchHistory"));
+
+    if (storedCities !== null) {
+      searchHistory = storedCities;
+    }
+
+    for (let i = 0; i < searchHistory.length; i++) {
+      previousCityBtn(searchHistory[i]);
+    }
+    // showCities();
+  }
+
+  // // Display searched cities
+  // function showCities() {
+  //   console.log(searchHistory);
+  // }
 });

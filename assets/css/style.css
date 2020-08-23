@@ -1,12 +1,10 @@
 .cities {
-  /* margin: 1rem; */
   float: left;
   width: 25%;
   padding: 1rem;
 }
 
 .forecast {
-  /* margin: ; */
   float: left;
   width: 75%;
   padding: 0 1rem;
@@ -35,7 +33,32 @@
 
 aside {
   background-color: #d3d3d3;
+  height: 100%;
 }
 body {
   background-color: #ededed;
+}
+
+.btn {
+  background-color: #292929;
+  color: #f0eaea;
+}
+
+.cityInfo {
+  padding: 1rem 2rem;
+}
+
+.weather-header {
+  padding: 2em;
+  text-align: center;
+  background-color: #1f1f1f;
+  color: #f7f7f7;
+}
+
+.temperature,
+.humidity,
+.wind,
+.uvIndex {
+  font-size: 1.2em;
+  font-weight: 500;
 }

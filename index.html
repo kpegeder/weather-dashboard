@@ -18,18 +18,13 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <style>
-      .myStyle {
-        border: solid red 1px;
-      }
-    </style>
   </head>
   <body>
-    <header class="jumbotron myStyle">
+    <header class="weather-header">
       <h1>Weather Dashboard</h1>
     </header>
 
-    <aside class="cities myStyle">
+    <aside class="cities">
       <h3>Search for a City:</h3>
       <input
         type="text"
@@ -40,9 +35,9 @@
       <button type="button" class="btn citySearchBtn">Search</button>
       <div class="list-group"></div>
     </aside>
-    <section class="forecast myStyle">
-      <section class="cityInfo myStyle"></section>
-      <section class="fiveDayForecast myStyle">
+    <section class="forecast">
+      <section class="cityInfo"></section>
+      <section class="fiveDayForecast">
         <h3>5-Day Forcast</h3>
         <div class="fiveDay row">
           <div class="singleDay"></div>
