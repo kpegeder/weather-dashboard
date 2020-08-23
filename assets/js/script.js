@@ -24,6 +24,7 @@ $(document).ready(function () {
 
   $(document).on("click", ".historyBtn", function () {
     let historyCity = $(this).val();
+    console.log(historyCity);
     forecast(historyCity);
   });
 
@@ -42,6 +43,15 @@ $(document).ready(function () {
       // Create element
       let UV = $("<p>").addClass("uvIndex");
 
+      // Color for UV index
+      if (response.value < 6) {
+        UV.addClass("uvBox-mod");
+      } else if (response.value >= 6 && response.value < 8) {
+        UV.addClass("uvBox-hi");
+      } else {
+        UV.addClass("uvBox-bad");
+      }
+
       UV.text("UV Index: " + response.value);
 
       $(".cityInfo").append(UV);
@@ -54,7 +64,7 @@ $(document).ready(function () {
 
     let queryURL =
       "https://api.openweathermap.org/data/2.5/weather?q=" +
-      citySearch +
+      city +
       "&appid=" +
       authKey;
 

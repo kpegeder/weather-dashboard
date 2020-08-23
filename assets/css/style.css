@@ -35,6 +35,7 @@ aside {
   background-color: #d3d3d3;
   height: 100%;
 }
+
 body {
   background-color: #ededed;
 }
@@ -61,4 +62,22 @@ body {
 .uvIndex {
   font-size: 1.2em;
   font-weight: 500;
+}
+
+.uvBox-mod {
+  width: fit-content;
+  height: 1.5em;
+  background-color: #00c400;
+}
+
+.uvBox-hi {
+  width: fit-content;
+  height: 1.5em;
+  background-color: #ffb327;
+}
+
+.uvBox-bad {
+  width: fit-content;
+  height: 1.5em;
+  background-color: #ff3b3b;
 }
