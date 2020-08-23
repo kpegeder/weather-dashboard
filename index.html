@@ -29,7 +29,7 @@
       <h1>Weather Dashboard</h1>
     </header>
 
-    <aside class="cities col-3 myStyle">
+    <aside class="cities myStyle">
       <h3>Search for a City:</h3>
       <input
         type="text"
@@ -38,44 +38,34 @@
         id="searchCity"
       />
       <button type="button" class="btn citySearchBtn">Search</button>
-      <div class="list-group">
-        <button type="button" class="list-group-item list-city">
-          Atlanta
-        </button>
-        <button type="button" class="list-group-item list-city">
-          Paris
-        </button>
-        <button type="button" class="list-group-item list-city">
-          London
-        </button>
-        <button type="button" class="list-group-item list-city">
-          Seattle
-        </button>
-        <button type="button" class="list-group-item list-city">
-          New York City
-        </button>
-      </div>
+      <div class="list-group"></div>
     </aside>
-    <section class="cityInfo col-8 myStyle">
-      <h2 class="city"></h2>
-      <div class="temperature"></div>
-      <div class="humidity"></div>
-      <div class="wind"></div>
-      <div class="uvIndex"></div>
-    </section>
-    <section class="forcast col-8 myStyle">
-      <h3>5-Day Forcast</h3>
-      <div class="forcast row">
-        <div class="singleDay myStyle"></div>
-        <div class="singleDay myStyle"></div>
-        <div class="singleDay myStyle"></div>
-        <div class="singleDay myStyle"></div>
-        <div class="singleDay myStyle"></div>
-      </div>
+    <section class="forecast myStyle">
+      <section class="cityInfo myStyle"></section>
+      <section class="fiveDayForecast myStyle">
+        <h3>5-Day Forcast</h3>
+        <div class="fiveDay row">
+          <div class="singleDay"></div>
+          <div class="singleDay"></div>
+          <div class="singleDay"></div>
+          <div class="singleDay"></div>
+          <div class="singleDay"></div>
+        </div>
+      </section>
     </section>
     <script
       src="https://code.jquery.com/jquery-3.5.1.js"
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
       crossorigin="anonymous"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
