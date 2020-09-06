@@ -66,31 +66,9 @@ body {
   font-weight: 500;
 }
 
-.uvBox-mod {
+.uvBox {
   width: fit-content;
   height: 1.5em;
-  background-color: #00c400;
-  border-radius: 5px;
-}
-
-.uvBox-hi {
-  width: fit-content;
-  height: 1.5em;
-  background-color: #ffff33;
-  border-radius: 5px;
-}
-
-.uvBox-vh {
-  width: fit-conent;
-  height: 1.5em;
-  background-color: #ffb327;
-  border-radius: 5px;
-}
-
-.uvBox-bad {
-  width: fit-content;
-  height: 1.5em;
-  background-color: #ff3b3b;
   border-radius: 5px;
 }
 

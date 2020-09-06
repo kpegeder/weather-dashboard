@@ -43,20 +43,38 @@ $(document).ready(function () {
       method: "GET"
     }).then(function (response) {
       // Create element
-      let UV = $("<p>").addClass("uvIndex");
+      let UV = $("<p>").addClass("uvIndex").text("UV Index: ");
 
       // Color for UV index
       if (response.value < 6) {
-        UV.addClass("uvBox-mod");
+        UV.append(
+          $("<span>")
+            .addClass("uvBox")
+            .css("background-color", "#00c400")
+            .text(response.value)
+        );
       } else if (response.value >= 6 && response.value < 8) {
-        UV.addClass("uvBox-hi");
+        UV.append(
+          $("<span>")
+            .addClass("uvBox")
+            .css("background-color", "#ffff33")
+            .text(response.value)
+        );
       } else if (response.value >= 8 && response.value < 11) {
-        UV.addClass("uvBox-vh");
+        UV.append(
+          $("<span>")
+            .addClass("uvBox")
+            .css("background-color", "#ffb327")
+            .text(response.value)
+        );
       } else {
-        UV.addClass("uvBox-bad");
+        UV.append(
+          $("<span>")
+            .addClass("uvBox")
+            .css("background-color", "#ff3b3b")
+            .text(response.value)
+        );
       }
-
-      UV.text("UV Index: " + response.value);
 
       $(".cityInfo").append(UV);
     });
